@@ -1,0 +1,12 @@
+services:
+  demystdata-code-kata-challenge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: code-kata-challenge:v1
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/data
+      - ./tests:/app/tests
+    environment:
+      - PYTHON_VERSION=3.12.5
